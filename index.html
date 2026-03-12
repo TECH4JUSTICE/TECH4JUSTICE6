@@ -7,26 +7,142 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+
+/* Animated Gradient Background */
+
+body{
+margin:0;
+font-family:Inter, sans-serif;
+
+background:linear-gradient(-45deg,#ffe5cc,#ffd1a6,#ffc48a,#ffdcbf);
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+}
+
+/* Gradient animation */
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* floating blobs */
+
+.blob{
+position:fixed;
+border-radius:50%;
+filter:blur(70px);
+opacity:0.5;
+z-index:-1;
+animation:float 20s infinite ease-in-out;
+}
+
+.blob1{
+width:400px;
+height:400px;
+background:#ffb347;
+top:10%;
+left:-100px;
+}
+
+.blob2{
+width:350px;
+height:350px;
+background:#ffd699;
+bottom:-100px;
+right:-80px;
+animation-delay:6s;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-50px)}
+100%{transform:translateY(0)}
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(20px);
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+font-weight:600;
+color:#5a3b20;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-card{
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(30px);
+border-radius:30px;
+padding:80px;
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+
+.hero h1{
+font-size:60px;
+margin:0;
+}
+
+/* cards */
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+padding:80px;
+}
+
+.card{
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(25px);
+padding:40px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+</style>
+
 </head>
 
 <body>
-  
+
+<!-- floating shapes -->
+
 <div class="blob blob1"></div>
 <div class="blob blob2"></div>
-<div class="blob blob3"></div>
+
 <nav>
 
-<div class="logo-area">
-
-<img src="https://raw.githubusercontent.com/CHANGE_THIS_TO_YOUR_GITHUB_USERNAME/tech4justice-clinic/main/assets/t4j-logo.png" class="logo">
-
-<span>TECH4JUSTICE</span>
-
-</div>
+<div><strong>TECH4JUSTICE</strong></div>
 
 <div>
 
-<a href="#about">About</a>
+<a href="#">Home</a>
 <a href="complaints.html">Complaints</a>
 <a href="chatbot-race.html">Race Bot</a>
 <a href="chatbot-disability.html">Disability Bot</a>
@@ -42,102 +158,41 @@
 
 <h1>TECH4JUSTICE CLINIC</h1>
 
-<p>Students will insert information about the clinic here.</p>
+<p>Legal technology tools built by students.</p>
 
 </div>
 
 </section>
 
 
-<section class="section" id="about">
-
-<div class="section-inner">
-
-<div class="glass">
-
-<h2>About the Clinic</h2>
-
-<p>Students will add detailed information about the clinic.</p>
-
-</div>
-
-
-<div class="card-grid">
+<section class="card-grid">
 
 <div class="card">
 
-<h3>Racial Discrimination Chatbot</h3>
+<h3>Race Discrimination Bot</h3>
 
-<p>Information about the racial discrimination chatbot.</p>
-
-<a href="chatbot-race.html">Open Tool →</a>
+<p>Information about the chatbot.</p>
 
 </div>
-
 
 <div class="card">
 
-<h3>Disability Discrimination Chatbot</h3>
+<h3>Disability Discrimination Bot</h3>
 
-<p>Information about the disability discrimination chatbot.</p>
-
-<a href="chatbot-disability.html">Open Tool →</a>
+<p>Information about the chatbot.</p>
 
 </div>
 
-</div>
+<div class="card">
+
+<h3>Complaint Information</h3>
+
+<p>Learn where to make complaints in NSW.</p>
 
 </div>
 
 </section>
-
-
-<div id="fab">
-
-<a href="https://www.hearmeout.org.au/" target="_blank">
-
-<img src="https://raw.githubusercontent.com/CHANGE_THIS_TO_YOUR_GITHUB_USERNAME/tech4justice-clinic/main/assets/hearmeout.png">
-
-</a>
-
-</div>
-
-
-<script>
-
-const fab=document.getElementById("fab");
-
-let dragging=false;
-let offsetX,offsetY;
-
-fab.addEventListener("mousedown",(e)=>{
-
-dragging=true;
-
-offsetX=e.clientX-fab.offsetLeft;
-offsetY=e.clientY-fab.offsetTop;
-
-});
-
-document.addEventListener("mousemove",(e)=>{
-
-if(!dragging) return;
-
-fab.style.left=(e.clientX-offsetX)+"px";
-fab.style.top=(e.clientY-offsetY)+"px";
-
-fab.style.right="auto";
-fab.style.bottom="auto";
-
-});
-
-document.addEventListener("mouseup",()=>{
-
-dragging=false;
-
-});
-
-</script>
 
 </body>
+
 </html>
