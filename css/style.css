@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#c7f0ff,#b5f5ec,#d6faff);
+color:#0f172a;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+position:sticky;
+top:0;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+font-weight:600;
+color:#0f172a;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#0ea5e9;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-card{
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(20px);
+border-radius:30px;
+padding:70px;
+box-shadow:0 25px 60px rgba(0,0,0,0.15);
+max-width:850px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:800;
+letter-spacing:3px;
+background:linear-gradient(90deg,#0284c7,#14b8a6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:20px;
+margin-top:20px;
+opacity:0.9;
+}
+
+.button{
+margin-top:35px;
+display:inline-block;
+padding:16px 34px;
+background:#0284c7;
+color:white;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.button:hover{
+transform:translateY(-3px);
+background:#0369a1;
+}
+
+/* SECTIONS */
+
+.section{
+padding:110px 20px;
+display:flex;
+justify-content:center;
+}
+
+.section-inner{
+max-width:1000px;
+width:100%;
+}
+
+/* GLASS PANELS */
+
+.glass{
+background:rgba(255,255,255,0.28);
+backdrop-filter:blur(22px);
+border-radius:25px;
+padding:50px;
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* CARD GRID */
+
+.card-grid{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.28);
+backdrop-filter:blur(20px);
+border-radius:25px;
+padding:40px;
+transition:0.35s;
+cursor:pointer;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 55px rgba(0,0,0,0.2);
+}
+
+.card a{
+text-decoration:none;
+font-weight:700;
+color:#0369a1;
+}
+
+/* CHATBOT SPACE */
+
+.bot-box{
+margin-top:30px;
+height:420px;
+border:2px dashed rgba(0,0,0,0.2);
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+opacity:0.8;
+}
+
+/* QUESTIONS */
+
+.question{
+margin-top:20px;
+padding:22px;
+background:rgba(255,255,255,0.22);
+border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:60px;
+opacity:0.8;
+font-weight:600;
+}
