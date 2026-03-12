@@ -17,7 +17,10 @@ document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
 <nav>
 
-<div><b>TECH4JUSTICE</b></div>
+<div class="logo-area">
+<img src="images/t4j-logo.png" class="logo">
+<span>TECH4JUSTICE</span>
+</div>
 
 <div>
 <a href="#about">About</a>
@@ -28,13 +31,14 @@ document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
 </nav>
 
+
 <section class="hero">
 
 <div class="hero-card">
 
 <h1>TECH4JUSTICE CLINIC</h1>
 
-<p>Students will insert information describing the clinic and its purpose.</p>
+<p>Students will insert information about the clinic here.</p>
 
 <a class="button" onclick="scrollToAbout()">Learn More</a>
 
@@ -51,7 +55,7 @@ document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
 <h2>About the Clinic</h2>
 
-<p>Students will add detailed information about the clinic here.</p>
+<p>Students will provide information about the clinic here.</p>
 
 </div>
 
@@ -62,7 +66,7 @@ document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
 <h3>Racial Discrimination Chatbot</h3>
 
-<p>Information about the purpose of the racial discrimination chatbot.</p>
+<p>Information about the racial discrimination chatbot.</p>
 
 <a href="chatbot-race.html">Open Tool →</a>
 
@@ -72,7 +76,7 @@ document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
 <h3>Disability Discrimination Chatbot</h3>
 
-<p>Information about the purpose of the disability discrimination chatbot.</p>
+<p>Information about the disability discrimination chatbot.</p>
 
 <a href="chatbot-disability.html">Open Tool →</a>
 
@@ -84,13 +88,55 @@ document.getElementById("about").scrollIntoView({behavior:"smooth"});
 
 </section>
 
-<a class="fab" href="https://www.hearmeout.org.au/" target="_blank">💬</a>
+
+<div id="fab">
+<a href="https://www.hearmeout.org.au/" target="_blank">
+<img src="images/hearmeout.png">
+</a>
+</div>
 
 <footer>
 
 TECH4JUSTICE LEGAL TECHNOLOGY CLINIC
 
 </footer>
+
+
+<script>
+
+const fab = document.getElementById("fab");
+
+let isDragging=false;
+let offsetX,offsetY;
+
+fab.addEventListener("mousedown",(e)=>{
+
+isDragging=true;
+
+offsetX=e.clientX-fab.offsetLeft;
+offsetY=e.clientY-fab.offsetTop;
+
+});
+
+document.addEventListener("mousemove",(e)=>{
+
+if(!isDragging) return;
+
+fab.style.left=(e.clientX-offsetX)+"px";
+fab.style.top=(e.clientY-offsetY)+"px";
+
+fab.style.right="auto";
+fab.style.bottom="auto";
+
+});
+
+document.addEventListener("mouseup",()=>{
+
+isDragging=false;
+
+});
+
+</script>
 
 </body>
 </html>
