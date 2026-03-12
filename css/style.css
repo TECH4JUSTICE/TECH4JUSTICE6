@@ -3,9 +3,8 @@
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#fff2e6,#ffe4cc,#ffd9b3);
+background:linear-gradient(135deg,#fff3e8,#ffd9b8,#ffc99c);
 color:#3b2a1a;
-overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -15,23 +14,37 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
-position:sticky;
-top:0;
-background:rgba(255,255,255,0.25);
+background:rgba(255,255,255,0.35);
 backdrop-filter:blur(20px);
 border-bottom:1px solid rgba(255,255,255,0.4);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
-margin-left:30px;
+margin-left:25px;
 text-decoration:none;
 font-weight:600;
-color:#4a2c1a;
-transition:0.3s;
+color:#5b3b20;
 }
 
 nav a:hover{
 color:#ff7a18;
+}
+
+/* LOGO */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:18px;
+}
+
+.logo{
+height:38px;
 }
 
 /* HERO */
@@ -39,23 +52,23 @@ color:#ff7a18;
 .hero{
 height:85vh;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 padding:40px;
 }
 
 .hero-card{
-background:rgba(255,255,255,0.35);
-backdrop-filter:blur(28px);
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(25px);
 border-radius:30px;
 padding:80px;
-box-shadow:0 25px 60px rgba(0,0,0,0.15);
+box-shadow:0 25px 70px rgba(0,0,0,0.15);
 max-width:900px;
 }
 
 .hero h1{
-font-size:72px;
+font-size:70px;
 font-weight:800;
 background:linear-gradient(90deg,#ff7a18,#ffb347);
 -webkit-background-clip:text;
@@ -65,27 +78,24 @@ background:linear-gradient(90deg,#ff7a18,#ffb347);
 .hero p{
 font-size:20px;
 margin-top:20px;
-opacity:0.9;
 }
 
 .button{
-margin-top:35px;
 display:inline-block;
-padding:16px 34px;
+margin-top:35px;
+padding:16px 32px;
 background:#ff7a18;
 color:white;
 border-radius:12px;
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
 }
 
 .button:hover{
-transform:translateY(-3px);
 background:#e76500;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
 padding:110px 20px;
@@ -94,15 +104,15 @@ justify-content:center;
 }
 
 .section-inner{
-max-width:1000px;
+max-width:1100px;
 width:100%;
 }
 
 /* GLASS PANEL */
 
 .glass{
-background:rgba(255,255,255,0.35);
-backdrop-filter:blur(28px);
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(30px);
 border-radius:25px;
 padding:50px;
 box-shadow:0 20px 60px rgba(0,0,0,0.12);
@@ -111,19 +121,18 @@ box-shadow:0 20px 60px rgba(0,0,0,0.12);
 /* CARD GRID */
 
 .card-grid{
-margin-top:50px;
+margin-top:40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
 .card{
-background:rgba(255,255,255,0.35);
+background:rgba(255,255,255,0.4);
 backdrop-filter:blur(20px);
 border-radius:25px;
 padding:40px;
 transition:0.35s;
-cursor:pointer;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
@@ -133,57 +142,53 @@ box-shadow:0 30px 70px rgba(0,0,0,0.2);
 }
 
 .card a{
-text-decoration:none;
 font-weight:700;
+text-decoration:none;
 color:#d45500;
 }
 
 /* BOT SPACE */
 
 .bot-box{
-margin-top:35px;
+margin-top:30px;
 height:420px;
-border:2px dashed rgba(0,0,0,0.25);
+border:2px dashed rgba(0,0,0,0.2);
 border-radius:18px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:600;
-opacity:0.7;
 }
 
-/* QUESTIONS / FAQ */
+/* QUESTIONS */
 
 .question{
-margin-top:18px;
-padding:20px;
-background:rgba(255,255,255,0.25);
-border-radius:14px;
+margin-top:15px;
+padding:18px;
+background:rgba(255,255,255,0.35);
+border-radius:12px;
 }
 
-/* FAB BUTTON */
+/* FAB */
 
-.fab{
+#fab{
 position:fixed;
 bottom:30px;
 right:30px;
-background:#ff7a18;
-color:white;
-width:70px;
-height:70px;
+width:90px;
+height:90px;
 border-radius:50%;
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(20px);
+box-shadow:0 10px 40px rgba(0,0,0,0.25);
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
-transition:0.3s;
+cursor:grab;
+z-index:9999;
 }
 
-.fab:hover{
-background:#e76500;
-transform:scale(1.1);
+#fab img{
+width:60px;
 }
 
 /* FOOTER */
