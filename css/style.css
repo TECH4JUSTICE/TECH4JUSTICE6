@@ -6,14 +6,14 @@ font-family:'Inter',sans-serif;
 color:#3b2a1a;
 overflow-x:hidden;
 
-/* animated gradient */
-
 background:linear-gradient(-45deg,#fff3e8,#ffd9b8,#ffc99c,#ffe6cc);
 background-size:400% 400%;
 animation:gradientShift 18s ease infinite;
+
+scroll-behavior:smooth;
 }
 
-/* gradient animation */
+/* GRADIENT ANIMATION */
 
 @keyframes gradientShift{
 0%{background-position:0% 50%;}
@@ -21,12 +21,12 @@ animation:gradientShift 18s ease infinite;
 100%{background-position:0% 50%;}
 }
 
-/* floating background blobs */
+/* FLOATING BLOBS */
 
 .blob{
 position:fixed;
 border-radius:50%;
-filter:blur(60px);
+filter:blur(70px);
 opacity:0.45;
 z-index:-1;
 animation:float 25s infinite ease-in-out;
@@ -84,10 +84,12 @@ margin-left:25px;
 text-decoration:none;
 font-weight:600;
 color:#5b3b20;
+transition:0.25s;
 }
 
 nav a:hover{
 color:#ff7a18;
+transform:translateY(-2px);
 }
 
 /* LOGO */
@@ -122,7 +124,30 @@ border-radius:30px;
 padding:80px;
 box-shadow:0 25px 80px rgba(0,0,0,0.18);
 max-width:900px;
+position:relative;
+overflow:hidden;
 }
+
+/* glass shine */
+
+.hero-card::before{
+content:'';
+position:absolute;
+top:-200%;
+left:-200%;
+width:400%;
+height:400%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+transform:rotate(25deg);
+transition:1.2s;
+}
+
+.hero-card:hover::before{
+top:-100%;
+left:-100%;
+}
+
+/* HERO TEXT */
 
 .hero h1{
 font-size:70px;
@@ -142,7 +167,7 @@ padding:50px;
 box-shadow:0 20px 70px rgba(0,0,0,0.12);
 }
 
-/* CARDS */
+/* CARD GRID */
 
 .card-grid{
 margin-top:40px;
@@ -166,7 +191,7 @@ transform:translateY(-10px) scale(1.02);
 box-shadow:0 30px 80px rgba(0,0,0,0.25);
 }
 
-/* glow edge */
+/* glowing card border */
 
 .card::after{
 content:'';
@@ -188,7 +213,27 @@ transition:0.4s;
 opacity:1;
 }
 
-/* chatbot box */
+/* BUTTONS */
+
+.button{
+display:inline-block;
+margin-top:35px;
+padding:16px 32px;
+background:#ff7a18;
+color:white;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.25s;
+}
+
+.button:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+background:#e76500;
+}
+
+/* CHATBOT */
 
 .bot-box{
 margin-top:30px;
@@ -200,13 +245,35 @@ align-items:center;
 justify-content:center;
 }
 
-/* FAQ */
+/* FAQ ACCORDION */
 
-.question{
-margin-top:15px;
-padding:18px;
+.faq{
+margin-top:30px;
+}
+
+.faq-item{
 background:rgba(255,255,255,0.35);
-border-radius:12px;
+border-radius:14px;
+margin-bottom:12px;
+overflow:hidden;
+}
+
+.faq-question{
+padding:18px;
+font-weight:600;
+cursor:pointer;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+padding:0 18px;
+transition:0.3s;
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+padding:18px;
 }
 
 /* FAB */
