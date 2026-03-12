@@ -38,13 +38,14 @@ color:#ff7a18;
 .logo-area{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 font-weight:800;
 font-size:18px;
 }
 
 .logo{
-height:38px;
+height:40px;
+width:auto;
 }
 
 /* HERO */
@@ -60,7 +61,7 @@ padding:40px;
 
 .hero-card{
 background:rgba(255,255,255,0.45);
-backdrop-filter:blur(25px);
+backdrop-filter:blur(30px);
 border-radius:30px;
 padding:80px;
 box-shadow:0 25px 70px rgba(0,0,0,0.15);
@@ -118,7 +119,7 @@ padding:50px;
 box-shadow:0 20px 60px rgba(0,0,0,0.12);
 }
 
-/* CARD GRID */
+/* CARDS */
 
 .card-grid{
 margin-top:40px;
@@ -147,7 +148,7 @@ text-decoration:none;
 color:#d45500;
 }
 
-/* BOT SPACE */
+/* CHATBOT AREA */
 
 .bot-box{
 margin-top:30px;
@@ -159,7 +160,7 @@ align-items:center;
 justify-content:center;
 }
 
-/* QUESTIONS */
+/* FAQ */
 
 .question{
 margin-top:15px;
@@ -189,12 +190,4 @@ z-index:9999;
 
 #fab img{
 width:60px;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:60px;
-opacity:0.8;
 }
