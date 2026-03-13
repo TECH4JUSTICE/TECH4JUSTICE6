@@ -3,146 +3,23 @@
 
 <head>
 
-<title>TECH4JUSTICE CLINIC</title>
+<title>Tech4Justice Clinic</title>
 
 <link rel="stylesheet" href="css/style.css">
-
-<style>
-
-/* Animated Gradient Background */
-
-body{
-margin:0;
-font-family:Inter, sans-serif;
-
-background:linear-gradient(-45deg,#ffe5cc,#ffd1a6,#ffc48a,#ffdcbf);
-background-size:400% 400%;
-animation:gradientMove 12s ease infinite;
-}
-
-/* Gradient animation */
-
-@keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-/* floating blobs */
-
-.blob{
-position:fixed;
-border-radius:50%;
-filter:blur(70px);
-opacity:0.5;
-z-index:-1;
-animation:float 20s infinite ease-in-out;
-}
-
-.blob1{
-width:400px;
-height:400px;
-background:#ffb347;
-top:10%;
-left:-100px;
-}
-
-.blob2{
-width:350px;
-height:350px;
-background:#ffd699;
-bottom:-100px;
-right:-80px;
-animation-delay:6s;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-50px)}
-100%{transform:translateY(0)}
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(255,255,255,0.35);
-backdrop-filter:blur(20px);
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-font-weight:600;
-color:#5a3b20;
-}
-
-/* HERO */
-
-.hero{
-height:80vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero-card{
-background:rgba(255,255,255,0.45);
-backdrop-filter:blur(30px);
-border-radius:30px;
-padding:80px;
-box-shadow:0 20px 60px rgba(0,0,0,0.15);
-}
-
-.hero h1{
-font-size:60px;
-margin:0;
-}
-
-/* cards */
-
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-padding:80px;
-}
-
-.card{
-background:rgba(255,255,255,0.45);
-backdrop-filter:blur(25px);
-padding:40px;
-border-radius:20px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,0.2);
-}
-
-</style>
 
 </head>
 
 <body>
 
-<!-- floating shapes -->
-
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
+<div class="container">
 
 <nav>
 
-<div><strong>TECH4JUSTICE</strong></div>
+<div><strong>TECH4JUSTICE CLINIC</strong></div>
 
 <div>
 
-<a href="#">Home</a>
+<a href="index.html">Home</a>
 <a href="complaints.html">Complaints</a>
 <a href="chatbot-race.html">Race Bot</a>
 <a href="chatbot-disability.html">Disability Bot</a>
@@ -151,47 +28,103 @@ box-shadow:0 20px 50px rgba(0,0,0,0.2);
 
 </nav>
 
-
 <section class="hero">
 
-<div class="hero-card">
+<h1>Tech4Justice Clinic</h1>
 
-<h1>TECH4JUSTICE CLINIC</h1>
-
-<p>Legal technology tools built by students.</p>
-
-</div>
+<p>Legal technology tools designed to help people navigate discrimination complaints.</p>
 
 </section>
 
+<div class="glass reveal">
 
-<section class="card-grid">
+<h2>About the Clinic</h2>
 
-<div class="card">
-
-<h3>Race Discrimination Bot</h3>
-
-<p>Information about the chatbot.</p>
+<p>Students will add information about the clinic here.</p>
 
 </div>
 
-<div class="card">
+<div class="grid">
 
-<h3>Disability Discrimination Bot</h3>
+<div class="card reveal">
 
-<p>Information about the chatbot.</p>
+<h3>Racial Discrimination Chatbot</h3>
 
-</div>
+<p>Guides users through the complaint process.</p>
 
-<div class="card">
-
-<h3>Complaint Information</h3>
-
-<p>Learn where to make complaints in NSW.</p>
+<a href="chatbot-race.html" class="button">Open Tool</a>
 
 </div>
 
-</section>
+<div class="card reveal">
+
+<h3>Disability Discrimination Chatbot</h3>
+
+<p>Helps identify possible discrimination claims.</p>
+
+<a href="chatbot-disability.html" class="button">Open Tool</a>
+
+</div>
+
+<div class="card reveal">
+
+<h3>Complaints Information</h3>
+
+<p>Learn about complaint bodies in NSW.</p>
+
+<a href="complaints.html" class="button">Learn More</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FAB -->
+
+<div id="fab">
+
+<a href="https://www.hearmeout.org.au/" target="_blank">
+
+<img src="assets/hearmeout.png">
+
+</a>
+
+</div>
+
+<script>
+
+const reveals=document.querySelectorAll(".reveal")
+
+window.addEventListener("scroll",()=>{
+
+reveals.forEach(el=>{
+
+const top=el.getBoundingClientRect().top
+
+if(top<window.innerHeight-100){
+
+el.classList.add("visible")
+
+}
+
+})
+
+})
+
+/* FAQ */
+
+document.querySelectorAll(".faq-question").forEach(q=>{
+
+q.addEventListener("click",()=>{
+
+q.parentElement.classList.toggle("active")
+
+})
+
+})
+
+</script>
 
 </body>
 
