@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Disability Discrimination Bot</title>
+
+<title>Disability Discrimination Chatbot</title>
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -17,49 +21,87 @@
 
 <a href="index.html">Home</a>
 <a href="complaints.html">Complaints</a>
+<a href="chatbot-race.html">Race Bot</a>
 
 </div>
 
 </nav>
 
-<div class="glass">
+<section class="hero-small">
 
 <h1>Disability Discrimination Chatbot</h1>
 
 <p>
-This chatbot helps users understand disability discrimination and possible complaint pathways.
+This tool helps users identify possible disability discrimination and understand complaint pathways.
 </p>
+
+</section>
+
+
+<div class="glass">
+
+<h2>Interactive Legal Tool</h2>
+
+<p>
+Answer a series of questions and the chatbot will guide you through potential legal options.
+</p>
+
 
 <div class="bot-wrapper">
 
 <iframe 
 src="https://au.bot.joseflegal.com/m4jEEAkP/final-2024-disability-bot-copy"
 frameborder="0"
-style="overflow:hidden;width:100%;height:100%;min-height:500px;min-width:300px;border:none;">
+style="overflow:hidden;width:100%;height:100%;min-height:500px;min-width:300px;border:none;"
+height="100%"
+width="100%">
 </iframe>
 
 </div>
 
 </div>
-</iframe>
 
 </div>
 
-</div>
 
-</div>
-
-</div>
+<!-- Floating Hear Me Out Button -->
 
 <div id="fab">
 
 <a href="https://www.hearmeout.org.au/" target="_blank">
 
-<img src="assets/hearmeout.png">
+<img src="hearmeout.png">
 
 </a>
 
 </div>
 
+
+<script>
+
+/* reveal animation */
+
+const reveals=document.querySelectorAll(".reveal")
+
+window.addEventListener("scroll",()=>{
+
+reveals.forEach(el=>{
+
+const top=el.getBoundingClientRect().top
+
+if(top<window.innerHeight-100){
+
+el.classList.add("visible")
+
+}
+
+})
+
+})
+
+</script>
+
+
 </body>
+
 </html>
